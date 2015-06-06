@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <time.h>
-#include <QDate>
+#include <QDateTime>
 #include <iostream>
 using namespace std;
 
@@ -30,8 +30,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     Dato *inicio;
-    QDate date = QDate();
-    time_t now = time(0);
+    QDateTime actual;
 
 private:
     Ui::MainWindow *ui;

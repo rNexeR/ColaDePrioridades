@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    cout<<QDate::currentDate().toString().toStdString()<<endl;
+    cout<<QDateTime::currentDateTime().toString().toStdString()<<endl;
 }
 
 MainWindow::~MainWindow()
