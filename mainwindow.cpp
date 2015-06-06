@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     cout<<QDateTime::currentDateTime().toString().toStdString()<<endl;
+    //Cola.primero = new Dato(100, "Nada");
 }
 
 MainWindow::~MainWindow()
