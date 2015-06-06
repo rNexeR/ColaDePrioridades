@@ -1,6 +1,7 @@
 #ifndef COLA
 #define COLA
 #include "dato.h"
+#include <QDateTime>
 
 class Cola{
 public:
