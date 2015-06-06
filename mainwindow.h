@@ -4,19 +4,7 @@
 #include <QMainWindow>
 #include <time.h>
 #include <QDateTime>
-#include <iostream>
-using namespace std;
-
-class Dato{
-public:
-    long tiempo;
-    string tarea;
-
-    Dato(long f, string t){
-        tiempo = f;
-        tarea = t;
-    }
-};
+#include "cola.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,7 +17,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    Dato *inicio;
     QDateTime actual;
 
 private:
