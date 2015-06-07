@@ -10,6 +10,7 @@ public:
     bool insert(QDateTime fecha, string desc);
     Dato* getInicio();
     bool posponerInicio(QDateTime fecha);
+    bool quitar();
 
 private:
     Dato* inicio;
