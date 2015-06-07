@@ -1,29 +1,21 @@
 #ifndef COLA
 #define COLA
 #include "dato.h"
-#include <QDateTime>
 
 class Cola{
 public:
+    Cola();
+    ~Cola();
+
+    bool insert(QDateTime fecha, string desc);
+    Dato* getInicio();
+    bool posponerInicio(QDateTime fecha);
+    bool quitar();
+
+private:
     Dato* inicio;
-    Cola(){
+    Dato* ultimo;
 
-    }
-    ~Cola(){
-
-    }
-    bool insert(QDateTime fecha, string desc){
-        return false;
-    }
-    Dato* getInicio(){
-        return inicio;
-    }
-    bool posponerInicio(QDateTime fecha){
-        return false;
-    }
-    string returnInicio(){
-        return "";
-    }
 };
 
 
