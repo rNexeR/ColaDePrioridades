@@ -16,7 +16,7 @@ Cola::~Cola(){
  * @return - True si la tarea se pudo ingresar (si la fecha no es antes de la fecha actual)
  */
 bool Cola::insert(QDateTime fecha, string desc){
-    QDateTime actual = new QDateTime(QDateTime::currentDateTime());
+    QDateTime actual = QDateTime::currentDateTime();
     actual.addMSecs(-2000);
     if(fecha <= actual)
         return false;
@@ -76,7 +76,7 @@ bool Cola::quitar(){
 bool Cola::posponerInicio(QDateTime fecha){
     Dato* actual = inicio;
 
-    QDateTime tiempo = actual->tiempo;
+    QDateTime tiempo = QDateTime::fromMSecsSinceEpoch(actual->tiempo);
     if(fecha < tiempo)
         return false;
 
